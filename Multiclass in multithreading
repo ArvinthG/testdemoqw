@@ -1,0 +1,31 @@
+class alphabets extends Thread
+{
+	public void run()
+	{
+		char i;
+
+        for(i= 'a'; i <= 'z'; i++){
+            System.out.print(i + " ");
+        }
+	}
+}
+class numbers extends Thread
+{
+	public void run()
+	{
+		for(int i = 1; i <= 10; i++)
+        {
+            System.out.println(i);
+        }
+	}
+public static void main (String args[])
+{ 
+alphabets a1=new alphabets();
+numbers a2=new numbers();
+System.out.println("alphabets is:"+a1);
+a1.run();
+System.out.println("\n numbers is:"+a2);
+a2.run();
+
+}
+}
